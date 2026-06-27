@@ -19,3 +19,9 @@ class UsuarioResponse(UsuarioBase):
 
     class Config:
         from_attributes = True
+
+class UsuarioUpdate(BaseModel):
+    username: Optional[str] = None
+    nombre_completo: Optional[str] = None
+    avatar_url: Optional[str] = None
+    redes_sociales: Optional[Dict[str, Any]] = None
